@@ -8,12 +8,12 @@ const TabItem = props => {
   const onClickTab = () => {
     setActiveTabId(tabId)
   }
-
-  const tabBtnClassName = isActive ? 'tab-button active' : 'tab-button'
-
+  const tabButtonClassName = isActive
+    ? 'tab-button active-button'
+    : 'tab-button'
   return (
     <li className="tab-item">
-      <button type="button" onClick={onClickTab} className={tabBtnClassName}>
+      <button type="button" className={tabButtonClassName} onClick={onClickTab}>
         {displayText}
       </button>
     </li>
